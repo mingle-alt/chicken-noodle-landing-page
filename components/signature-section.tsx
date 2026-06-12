@@ -4,12 +4,12 @@ export function SignatureSection() {
   return (
     <section className="bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-5xl items-center gap-8 px-4 py-14 md:grid-cols-2 md:py-20">
-        <div className="relative order-2 aspect-[4/5] overflow-hidden rounded-3xl border border-primary-foreground/15 shadow-xl md:order-1">
+        <div className="relative order-2 aspect-square overflow-hidden rounded-3xl border border-primary-foreground/15 bg-white shadow-xl md:order-1">
           <Image
             src="/images/signature-bowl.png"
             alt="현풍닭칼국수 대표 메뉴 - 진한 국물의 닭칼국수 한 그릇"
             fill
-            className="object-cover"
+            className="object-contain"
             sizes="(max-width: 768px) 100vw, 480px"
           />
         </div>

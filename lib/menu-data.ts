@@ -74,4 +74,6 @@ export const contact = {
   phoneHref: "tel:0269542118",
   address: "서울 강남구 테헤란로20길 19",
   addressNote: "강남역과 역삼역 사이",
+  directionsHref:
+    "https://www.google.com/maps/search/?api=1&query=%ED%98%84%ED%92%8D%EB%8B%AD%EC%B9%BC%EA%B5%AD%EC%88%98%20%EA%B0%95%EB%82%A8%EC%97%AD%EC%82%BC%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C20%EA%B8%B8%2019",
 }

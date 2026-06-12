@@ -1,4 +1,4 @@
-import { Phone, MapPin, ShoppingBag, CalendarCheck } from "lucide-react"
+import { Phone, MapPin, ShoppingBag, CalendarCheck, Navigation } from "lucide-react"
 import { contact } from "@/lib/menu-data"
 
 export function LocationSection() {
@@ -59,13 +59,24 @@ export function LocationSection() {
               </p>
             </div>
 
-            <a
-              href={contact.phoneHref}
-              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 text-base font-bold text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              <Phone className="size-5" />
-              {contact.phone} 전화하기
-            </a>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <a
+                href={contact.phoneHref}
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 text-base font-bold text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                <Phone className="size-5" />
+                전화하기
+              </a>
+              <a
+                href={contact.directionsHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-card px-6 py-4 text-base font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
+              >
+                <Navigation className="size-5" />
+                길찾기
+              </a>
+            </div>
           </div>
         </div>
       </div>
