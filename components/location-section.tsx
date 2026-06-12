@@ -1,5 +1,5 @@
 import { Phone, MapPin, ShoppingBag, CalendarCheck, Navigation } from "lucide-react"
-import { contact } from "@/lib/menu-data"
+import { contact, mapLinks } from "@/lib/menu-data"
 
 export function LocationSection() {
   const mapQuery = encodeURIComponent(`${contact.name} ${contact.address}`)
@@ -67,15 +67,32 @@ export function LocationSection() {
                 <Phone className="size-5" />
                 전화하기
               </a>
-              <a
-                href={contact.directionsHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-card px-6 py-4 text-base font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
-              >
-                <Navigation className="size-5" />
-                길찾기
-              </a>
+              {mapLinks.slice(0, 1).map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-card px-6 py-4 text-base font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
+                >
+                  <Navigation className="size-5" />
+                  길찾기
+                </a>
+              ))}
+            </div>
+
+            <div className="grid gap-2 sm:grid-cols-3">
+              {mapLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center justify-center rounded-xl border border-border bg-background px-3 text-sm font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>

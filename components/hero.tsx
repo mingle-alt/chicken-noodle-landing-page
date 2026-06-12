@@ -59,6 +59,26 @@ export function Hero() {
               sizes="(max-width: 768px) 100vw, 480px"
             />
           </div>
+          <div className="mt-3 grid grid-cols-2 gap-3">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+              <Image
+                src="/images/signature-bowl.png"
+                alt="현풍닭칼국수 대표 닭칼국수 메뉴 사진"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 240px"
+              />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+              <Image
+                src="/images/hero-spread.png"
+                alt="수육과 반찬을 곁들인 현풍닭칼국수 한 상"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 240px"
+              />
+            </div>
+          </div>
           <div className="absolute -bottom-4 -left-4 hidden rounded-2xl border border-border bg-card px-5 py-4 shadow-lg sm:block">
             <p className="font-mono text-[10px] tracking-[0.25em] text-primary">
               SINCE 1982

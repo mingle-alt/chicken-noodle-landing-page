@@ -19,9 +19,44 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://chicken-noodle-landing-page.vercel.app'),
   title: '현풍닭칼국수 강남역삼점 | 건강을 생각하는 닭칼국수 전문점',
   description:
-    '한 끼의 식사라도 건강을 생각하겠습니다. 현풍닭칼국수 강남역삼점 - 강남역과 역삼역 사이, 진한 닭육수 칼국수 전문점. 전화 02-6954-2118',
+    '강남역과 역삼역 사이 현풍닭칼국수 강남역삼점. 진한 닭육수 닭칼국수, 닭곰탕, 한방수육을 즐길 수 있는 닭칼국수 전문점입니다.',
+  keywords: [
+    '현풍닭칼국수 강남역삼점',
+    '강남역 닭칼국수',
+    '역삼역 칼국수',
+    '강남역 칼국수',
+    '강남 닭곰탕',
+    '강남역 점심',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: '현풍닭칼국수 강남역삼점',
+    description:
+      '강남역과 역삼역 사이, 진한 닭육수로 끓여낸 닭칼국수 전문점.',
+    url: '/',
+    siteName: '현풍닭칼국수 강남역삼점',
+    locale: 'ko_KR',
+    type: 'website',
+    images: [
+      {
+        url: '/images/hero-spread.png',
+        width: 1200,
+        height: 630,
+        alt: '현풍닭칼국수 강남역삼점 대표 상차림',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '현풍닭칼국수 강남역삼점',
+    description: '강남역과 역삼역 사이 닭칼국수 전문점.',
+    images: ['/images/hero-spread.png'],
+  },
   generator: 'v0.app',
   icons: {
     icon: [

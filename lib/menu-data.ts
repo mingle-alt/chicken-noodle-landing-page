@@ -12,6 +12,40 @@ export type MenuCategory = {
   items: MenuItem[]
 }
 
+export type FeaturedMenuItem = MenuItem & {
+  desc: string
+}
+
+export type MapLink = {
+  label: string
+  href: string
+}
+
+const placeQuery = encodeURIComponent(
+  "현풍닭칼국수 강남역삼점 서울 강남구 테헤란로20길 19",
+)
+
+export const featuredMenus: FeaturedMenuItem[] = [
+  {
+    name: "닭칼국수",
+    price: "9,000",
+    tag: "대표",
+    desc: "진한 닭육수와 생면을 가장 깔끔하게 즐기는 기본 한 그릇",
+  },
+  {
+    name: "닭칼국수 (곱배기)",
+    price: "9,500",
+    tag: "인기",
+    desc: "든든한 점심을 찾는 손님에게 가장 많이 선택되는 메뉴",
+  },
+  {
+    name: "한방수육",
+    price: "23,000",
+    tag: "추천",
+    desc: "칼국수와 함께 나누기 좋은 부드러운 곁들임 메뉴",
+  },
+]
+
 export const menuCategories: MenuCategory[] = [
   {
     id: "main",
@@ -74,6 +108,13 @@ export const contact = {
   phoneHref: "tel:0269542118",
   address: "서울 강남구 테헤란로20길 19",
   addressNote: "강남역과 역삼역 사이",
-  directionsHref:
-    "https://www.google.com/maps/search/?api=1&query=%ED%98%84%ED%92%8D%EB%8B%AD%EC%B9%BC%EA%B5%AD%EC%88%98%20%EA%B0%95%EB%82%A8%EC%97%AD%EC%82%BC%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C20%EA%B8%B8%2019",
+  directionsHref: `https://www.google.com/maps/search/?api=1&query=${placeQuery}`,
+  naverMapHref: `https://map.naver.com/p/search/${placeQuery}`,
+  kakaoMapHref: `https://map.kakao.com/?q=${placeQuery}`,
 }
+
+export const mapLinks: MapLink[] = [
+  { label: "네이버지도", href: contact.naverMapHref },
+  { label: "카카오맵", href: contact.kakaoMapHref },
+  { label: "Google Maps", href: contact.directionsHref },
+]

@@ -1,5 +1,6 @@
 import { Clock } from "lucide-react"
 import { hours } from "@/lib/menu-data"
+import { OpenStatus } from "@/components/open-status"
 
 export function HoursSection() {
   return (
@@ -17,6 +18,7 @@ export function HoursSection() {
               연중무휴 운영하며, 라스트오더 시간을 꼭 확인해 주세요. 명절 등
               휴무는 매장 공지를 참고 바랍니다.
             </p>
+            <OpenStatus />
           </div>
 
           <div className="flex flex-col gap-3">

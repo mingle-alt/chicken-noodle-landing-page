@@ -1,4 +1,4 @@
-import { menuCategories } from "@/lib/menu-data"
+import { featuredMenus, menuCategories } from "@/lib/menu-data"
 
 export function MenuSection() {
   return (
@@ -14,6 +14,33 @@ export function MenuSection() {
           <p className="mt-3 text-muted-foreground">
             계절에 따라 즐기는 다양한 칼국수와 곁들임 메뉴
           </p>
+        </div>
+
+        <div className="mb-8 grid gap-4 md:grid-cols-3">
+          {featuredMenus.map((item) => (
+            <div
+              key={item.name}
+              className="rounded-2xl border border-brass/40 bg-brass/10 p-5"
+            >
+              <div className="mb-3 flex items-center justify-between gap-3">
+                <span className="rounded-full bg-primary px-2.5 py-1 text-xs font-bold text-primary-foreground">
+                  {item.tag}
+                </span>
+                <span className="font-mono text-lg font-black text-foreground">
+                  {item.price}
+                  <span className="ml-0.5 text-xs font-normal text-muted-foreground">
+                    원
+                  </span>
+                </span>
+              </div>
+              <h3 className="font-serif text-xl font-black text-foreground">
+                {item.name}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
